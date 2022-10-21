@@ -1,0 +1,32 @@
+{
+	"name": "flowlet1",
+	"properties": {
+		"type": "Flowlet",
+		"typeProperties": {
+			"sources": [],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				},
+				{
+					"name": "input1"
+				},
+				{
+					"name": "output1"
+				}
+			],
+			"scriptLines": [
+				"input(output(",
+				"          eid as string,",
+				"          ename as string,",
+				"          salary as integer",
+				"     ),",
+				"     order: 0) ~> input1",
+				"input1 derive(ename = initCap(ename),",
+				"          tax = salary*30/100) ~> derivedColumn1",
+				"derivedColumn1 output() ~> output1"
+			]
+		}
+	}
+}
