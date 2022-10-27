@@ -4,7 +4,7 @@
 		"annotations": [
 			"my own trigger 1"
 		],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
